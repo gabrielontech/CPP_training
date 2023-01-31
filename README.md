@@ -1,7 +1,7 @@
 # CPP_training
-## C++ Bootcamp
+## C++ 98 Bootcamp
 
-Welcome to my C++ Bootcamp repository! Here, I document my journey as I train myself in the programming language C++.
+Welcome to my C++ 98 Bootcamp repository! Here, I document my journey as I train myself in the programming language C++.
 
 ### Why C++?
 C++ is a versatile, high-performance programming language used in a variety of applications, including system programming, game development, and scientific computing. It offers a mix of high-level and low-level programming constructs that make it a powerful tool for problem-solving.
