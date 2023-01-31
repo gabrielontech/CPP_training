@@ -34,10 +34,23 @@ void    Phone_Book::printRepertoire(std::string str)
 }
 
 
+int Phone_Book::replace_older_contact(std::string last_name, std::string name, std::string number, std::string nick_name, std::string dark_secret)
+{
+	this->_index--;
+	if (nick_name.empty() || last_name.empty() || name.empty() || number.empty() || dark_secret.empty())
+		return (ERROR);
+	this->_tab_contacts[0].Contact::set_id(this->_index);
+	this->_tab_contacts[0].Contact::set_name(name);
+	this->_tab_contacts[0].Contact::set_lastname(last_name);
+	this->_tab_contacts[0].Contact::set_phone_nb(number);
+	this->_tab_contacts[0].Contact::set_nickname(nick_name);
+	this->_tab_contacts[0].Contact::set_dark_secret(dark_secret);
+	return (SUCCESS);
+}
+
+
 int Phone_Book::fillContact(std::string last_name, std::string name, std::string number, std::string nick_name, std::string dark_secret)
 {
-	if (this->_index == 8)
-		this->_index--;
 	if (nick_name.empty() || last_name.empty() || name.empty() || number.empty() || dark_secret.empty())
 		return (ERROR);
 	this->_tab_contacts[this->_index].Contact::set_id(this->_index);
@@ -79,7 +92,12 @@ int Phone_Book::add_contact(void)
 	getline(std::cin, dark_secret);
 	if (std::cin.eof())
 		Phone_Book::exit_things();
-	if((Phone_Book::fillContact(last_name, name, number, nick_name, dark_secret)) == ERROR)
+	if (this->_index == 8)
+	{
+		if((Phone_Book::replace_older_contact(last_name, name, number, nick_name, dark_secret)) == ERROR)
+			return (ERROR);
+	}
+	else if ((Phone_Book::fillContact(last_name, name, number, nick_name, dark_secret)) == ERROR)
 		return (ERROR);
 	this->_index++;
 	std::cout << "Contact added" << std::endl;
