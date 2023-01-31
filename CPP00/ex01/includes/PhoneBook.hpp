@@ -1,20 +1,18 @@
-#ifndef PHONE_BOOK
-# define PHONE_BOOK
+#ifndef Phone_Book
+# define Phone_Book
 
-#include "../includes/contact.class.hpp"
+#include "../includes/Contact.hpp"
 
-class Phone_Book
+class PhoneBook
 {
-
 	public :
 
-		Phone_Book();
-		~Phone_Book();
+		PhoneBook();
+		~PhoneBook();
 		int add_contact(void);
 		int search_contact();
 		void menu();
 		void printRepertoire(std::string str);
-		int replace_older_contact(std::string last_name, std::string name, std::string number, std::string nick_name, std::string dark_secret);
 		int fillContact(std::string last_name, std::string name, std::string number, std::string nick_name, std::string dark_secret);
 		void exit_things(void);
 	private :

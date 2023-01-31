@@ -1,8 +1,8 @@
-#include "../includes/phoneBook_class.hpp"
+#include "../includes/PhoneBook.hpp"
 
 int main()
 {
-	Phone_Book phone_book;
+	PhoneBook phoneBook;
 	std::cout << "|-------------------------------|" << std::endl;
     std::cout << "|     WELCOME ON PHONEBOOK      |" << std::endl;
     std::cout << "|-------------------------------|" << std::endl;
@@ -10,6 +10,6 @@ int main()
     std::cout << "|SEARCH ➜       Search Contact  |" << std::endl;
     std::cout << "|EXIT   ➜       Quit program    |" << std::endl;
     std::cout << "|-------------------------------|" << std::endl;
-	phone_book.menu();
+	phoneBook.menu();
 	return (0);
 }

@@ -3,8 +3,8 @@
 ## SRC ##
 
 SOURCES		+=               		\
-		src/contact.cpp         	\
-		src/phone_book.cpp      	\
+		src/Contact.cpp         	\
+		src/PhoneBook.cpp      	\
 		src/main.cpp            	\
 
 
