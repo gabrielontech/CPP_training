@@ -153,7 +153,7 @@ void Phone_Book::menu(void)
 		}
 			std::cout << "YOUR CHOICE (Make sure to choose an option written on the top): " << std::endl;
 		std::getline(std::cin, command);
-		if (std::cin.eof())
+		if (std::cin.eof()) // tricky condition because when you ctrl+D the getline lose control haha, i've done it each time I use get_line.
 			return;
 		if (command == "ADD")
 		{
