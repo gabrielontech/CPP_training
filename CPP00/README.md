@@ -1,5 +1,5 @@
-# C++ Fundamentals
-This guide provides a concise overview of the essential concepts in C++ classes.
+# C++ 00 knowledges
+This guide provides an overview of the essential concepts that i've learned in C++ classes so far.
 
 ## What is a C++ Class?
  - A C++ class is a blueprint for creating objects that combine data and behaviors. Classes are used to encapsulate data and operations on that data.
