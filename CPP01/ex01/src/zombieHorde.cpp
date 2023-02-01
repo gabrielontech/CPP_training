@@ -1,7 +1,7 @@
 #include "../includes/Zombie.hpp"
 
-Zombie	*zombieHorde(int N, std::string name){
-
+Zombie	*zombieHorde(int N, std::string name)
+{
 	int	i = 0;
     if (N <= 0)
         return (NULL);

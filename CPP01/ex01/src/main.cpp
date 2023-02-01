@@ -1,6 +1,7 @@
 #include "../includes/Zombie.hpp"
 
-int	main(){
+int	main()
+{
 
 	Zombie	*horde;
 	
