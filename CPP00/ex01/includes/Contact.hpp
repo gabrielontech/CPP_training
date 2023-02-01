@@ -1,5 +1,5 @@
-#ifndef CONTACTS
-#define CONTACTS
+#ifndef CONTACTS_HPP
+#define CONTACTS_HPP
 
 #include <iostream>
 #include <cstring>
@@ -31,7 +31,7 @@ class Contact
 	private :
 		std::string _last_name;
 		std::string _name;
-		std::string nick_name;
+		std::string _nick_name;
 		std::string _dark_secret;
 		std::string _phone_nb;
 		int _id;
