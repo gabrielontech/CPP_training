@@ -17,6 +17,7 @@ class PhoneBook
 		void exit_things(void);
 	private :
 		Contact _tab_contacts[8];
+		int __nb_current_contacts;
 		int _index;
 };
 

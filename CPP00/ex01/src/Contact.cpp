@@ -32,7 +32,7 @@ std::string Contact::get_name(void)
 
 std::string Contact::get_nickname(void)
 {
-	return (this->nick_name);
+	return (this->_nick_name);
 }
 
 void Contact::set_lastname(std::string str)
@@ -43,7 +43,7 @@ void Contact::set_lastname(std::string str)
 
 void Contact::set_nickname(std::string str)
 {
-	this->nick_name = str;
+	this->_nick_name = str;
 	return;
 }
 

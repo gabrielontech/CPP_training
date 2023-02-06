@@ -3,6 +3,7 @@
 PhoneBook::PhoneBook(void)
 {
 	this->_index = -1;
+	this->__nb_current_contacts = 0;
 	return;
 }
 
@@ -78,6 +79,8 @@ int PhoneBook::add_contact(void)
 	if ((PhoneBook::fillContact(last_name, name, number, nick_name, dark_secret)) == ERROR)
 		return (ERROR);
 	this->_index++;
+	if (this->_index <= 8)
+		this->__nb_current_contacts++;
 	std::cout << "Contact added" << std::endl;
 	return (SUCCESS);
 }
@@ -122,7 +125,8 @@ int PhoneBook::search_contact()
 		std::cout << "Wrong index" << std::endl;
 		return (ERROR);
 	}
-	if (atoi(index.c_str()) > (this->_index % 8))
+	std::cout << this->__nb_current_contacts << std::endl;
+	if (atoi(index.c_str()) > 8 || atoi(index.c_str()) > this->__nb_current_contacts)
 	{
 		std::cout << "Wrong index" << std::endl;
 		return (ERROR);
