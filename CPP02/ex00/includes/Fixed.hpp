@@ -7,7 +7,7 @@ class Fixed
 {
     private:
         int _value;
-        const int _bits = 8;
+        static const int _bits = 8;
     public:
         //constructors and destructors
         Fixed();

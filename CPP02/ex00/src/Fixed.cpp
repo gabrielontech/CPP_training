@@ -13,16 +13,16 @@ Fixed::Fixed(const Fixed& other)
     *this = other;
 }
 
-Fixed::setRawBits(int const raw)
-{
-    std::cout << "setRawbits member function called" << std::endl;
-    this->_value = raw;
-}
-
 Fixed::getRawBits(void) const 
 {
     std::cout << "getRawbits member function called" << std::endl;
     return (this->_value);
+}
+
+Fixed::setRawBits(int const raw)
+{
+    std::cout << "setRawbits member function called" << std::endl;
+    this->_value = raw;
 }
 
 Fixed::~Fixed()
