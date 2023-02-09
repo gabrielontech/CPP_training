@@ -3,23 +3,24 @@
 #include <string>
 
 //constructors and destructors
-Fixed::Fixed() : _value(0);
+Fixed::Fixed() : _value(0)
 {
-    std::cout << "Default constructor of Fixed called." << std::endl;
+    std::cout << "Default constructor called" << std::endl;
 }
+
 Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor called" << std::endl;
     *this = other;
 }
 
-Fixed::getRawBits(void) const 
+int Fixed::getRawBits(void)const 
 {
     std::cout << "getRawbits member function called" << std::endl;
     return (this->_value);
 }
 
-Fixed::setRawBits(int const raw)
+void Fixed::setRawBits(int const raw)
 {
     std::cout << "setRawbits member function called" << std::endl;
     this->_value = raw;
