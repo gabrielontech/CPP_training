@@ -11,7 +11,6 @@ class Fixed
     public:
         //constructors and destructors
         Fixed();
-        Fixed(int value);
         int     getRawBits( void )const;
         void    setRawBits( int const raw );
         Fixed(const Fixed& other);
