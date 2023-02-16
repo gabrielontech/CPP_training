@@ -1,23 +1,21 @@
 #include "../includes/ScavTrap.hpp"
 
-std::string ScavTrap::getName(void)
+ScavTrap::ScavTrap()
 {
-    return (_name);
+    std::cout << "Default Constructor of ScavTrap Trap called" << std::endl;
+    return ;
 }
 
-int ScavTrap::getAttack(void)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
-    return (_attack);
+    std::cout << "Default Constructor of ScavTrap Trap called" << std::endl;
+    return ;
 }
 
-int ScavTrap::getHits(void)
+ScavTrap::~ScavTrap()
 {
-    return(_hits);
-}
-
-int ScavTrap::getEnergy(void)
-{
-    return(_energy);
+    std::cout << "Destructor of ClapTrap called" << std::endl;
+    return ;
 }
 
 void ScavTrap::attack(const std::string& target)
@@ -40,7 +38,8 @@ void ScavTrap::guardGate()
 {
     std::cout << "ScavTrap : " << _name << " turned into gate keeper mode" << std::endl;
 }
-/*
+
+
 std::ostream &operator<<(std::ostream &out, ScavTrap const &elem)
 {
     out << "Claptrap Name : " << elem.getName() << std::endl;
@@ -49,4 +48,3 @@ std::ostream &operator<<(std::ostream &out, ScavTrap const &elem)
     out << "Claptrap Damages : " << elem.getAttack() << std::endl;
     return (out);
 }
-*/

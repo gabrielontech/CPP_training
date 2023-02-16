@@ -2,9 +2,9 @@
 
 ## SRC ##
 
-SOURCES		+=              		\
-		src/main.cpp           	\
-		src/ClapTrap.cpp       	\
-		src/ScravTrap.cpp      	\
+SOURCES		+=             		\
+		src/main.cpp          	\
+		src/ClapTrap.cpp      	\
+		src/ScavTrap.cpp      	\
 
 

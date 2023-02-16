@@ -1,5 +1,25 @@
 #include "../includes/ClapTrap.hpp"
 
+std::string ClapTrap::getName(void) const
+{
+    return (_name);
+}
+
+unsigned int ClapTrap::getAttack(void) const
+{
+    return (_attack);
+}
+
+int ClapTrap::getHits(void) const
+{
+    return(_hits);
+}
+
+int ClapTrap::getEnergy(void) const
+{
+    return(_energy);
+}
+
 ClapTrap::ClapTrap(): _name("No Name"), _hits(100), _attack(20), _energy(50)
 {
     std::cout << "Default constructor of ClapTrap called" << std::endl;
@@ -89,4 +109,13 @@ ClapTrap & ClapTrap::operator=( ClapTrap const & src )
    _energy = src._energy;
 
    return *this;
+}
+
+std::ostream &operator<<(std::ostream &out, ClapTrap const &elem)
+{
+    out << "Claptrap Name : " << elem.getName() << std::endl;
+    out << "Claptrap Hit Points : " << elem.getHits() << std::endl;
+    out << "Claptrap Energy Points : " << elem.getEnergy() << std::endl;
+    out << "Claptrap Damages : " << elem.getAttack() << std::endl;
+    return (out);
 }

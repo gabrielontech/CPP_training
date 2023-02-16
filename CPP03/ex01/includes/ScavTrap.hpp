@@ -16,15 +16,10 @@ class ScavTrap : public ClapTrap
         ScavTrap(const ScavTrap& other);
         ~ScavTrap();
         void attack(const std::string& target);
-        std::string getName(void);
-        int getHits(void);
-        int getAttack(void);
-        int getEnergy(void);
         void guardGate();
         int energy(void);
         //overloads
         ScavTrap& operator=(const ScavTrap& rhs);
 };
 std::ostream &operator<<(std::ostream &out, ScavTrap const &elem);
-
 #endif
