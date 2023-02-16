@@ -50,6 +50,20 @@ Fixed& Fixed::operator=(const Fixed& rhs)
     return (*this);
 }
 
+const Fixed &Fixed::max(Fixed const &a, Fixed const &b)
+{
+    if (a._value > b._value)
+        return (a);
+    return (b);
+}
+
+const Fixed& Fixed::min(Fixed const &a, Fixed const &b)
+{
+    if (a._value < b._value)
+        return (a);
+    return (b);
+}
+
 Fixed   Fixed::operator+(Fixed const &first)
 {
     return (Fixed(this->toFloat() + first.toFloat()));
@@ -99,7 +113,35 @@ bool Fixed::operator!=(const Fixed& rhs)
 {
     return (this->_value != rhs.getRawBits());
 }
- 
+
+Fixed& Fixed::operator++( void )
+{
+    _value++;
+    return (*this);
+}
+
+Fixed Fixed::operator++( int )
+{
+    Fixed   tmp(*this);
+
+    tmp.setRawBits(_value++);
+    return (tmp);
+}
+
+Fixed& Fixed::operator--( void )
+{
+    _value--;
+    return (*this);
+}
+
+Fixed Fixed::operator--( int )
+{
+    Fixed   tmp;
+
+    tmp.setRawBits(this->getRawBits() - 1);
+    return (tmp);
+}
+
 std::ostream& operator<<( std::ostream &nstream, Fixed const &src )
 {
     //std::cout << "Shift operator called" << std::endl;

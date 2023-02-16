@@ -20,9 +20,10 @@ class Fixed
         void    setRawBits( int const raw );
         Fixed(const Fixed& other);
         int min(int a, int b);
-        float min(const float a, const float b);
-        int max(int a, int b);
-        float max(const float a, const float b);
+        static Fixed   &min(Fixed &first, Fixed &second);
+        static Fixed   &max(Fixed &first, Fixed &second);
+        static const   Fixed  &min(Fixed const &first, Fixed const &second);
+        static const   Fixed  &max(Fixed const &first, Fixed const &second);
         ~Fixed();
         //overloads
         Fixed& operator=(const Fixed& rhs);
