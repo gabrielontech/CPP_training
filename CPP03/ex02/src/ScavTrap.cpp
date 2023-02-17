@@ -42,9 +42,9 @@ void ScavTrap::guardGate()
 
 std::ostream &operator<<(std::ostream &out, ScavTrap const &elem)
 {
-    out << "Scavtrap Name : " << elem.getName() << std::endl;
-    out << "Scavtrap Hit Points : " << elem.getHits() << std::endl;
-    out << "Scavtrap Energy Points : " << elem.getEnergy() << std::endl;
-    out << "Scavtrap Damages : " << elem.getAttack() << std::endl;
+    out << "Scravtrap Name : " << elem.getName() << std::endl;
+    out << "Scravtrap Hit Points : " << elem.getHits() << std::endl;
+    out << "Scravtrap Energy Points : " << elem.getEnergy() << std::endl;
+    out << "Scravtrap Damages : " << elem.getAttack() << std::endl;
     return (out);
 }

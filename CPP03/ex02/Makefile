@@ -11,8 +11,8 @@ ifeq ($(shell uname -s),Darwin)
 endif
 
 #The Target Binary Program
-TARGET				:= ScavTrap
-TARGET_BONUS		:= ScavTrap-bonus
+TARGET				:= FragTrap
+TARGET_BONUS		:= FragTrap-bonus
 
 BUILD				:= release
 
