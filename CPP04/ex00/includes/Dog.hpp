@@ -13,10 +13,11 @@ class Dog : public Animal
         Dog();
         Dog(const Dog& other);
         ~Dog();
-        std::string getType();
+        void makeSound() const;
         //overloads
         Dog& operator=(const Dog& rhs);
 };
 
 std::ostream &operator<<(std::ostream &out, Dog const &elem);
+
 #endif
