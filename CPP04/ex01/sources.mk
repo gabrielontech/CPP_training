@@ -8,6 +8,7 @@ SOURCES		+=                		\
 		src/main.cpp             	\
 		src/WrongAnimal.cpp      	\
 		src/Animal.cpp           	\
+		src/Brain.cpp            	\
 		src/Dog.cpp              	\
 
 

@@ -1,6 +1,6 @@
 #include "../includes/Cat.hpp"
 
-Cat::Cat(): Animal("Cat")
+Cat::Cat(): Animal("Cat"), _brain(new Brain)
 {
     std::cout << "Default constructor of Cat called" << std::endl;
     return ;
@@ -8,6 +8,7 @@ Cat::Cat(): Animal("Cat")
 
 Cat::~Cat()
 {
+    delete _brain;
     std::cout << "Destructor of Cat called" << std::endl;
     return ;
 }

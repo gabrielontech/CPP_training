@@ -1,6 +1,6 @@
 #include "../includes/Dog.hpp"
 
-Dog::Dog(): Animal("Dog")
+Dog::Dog(): Animal("Dog"), _brain(new Brain)
 {
     std::cout << "Default constructor of Dog called" << std::endl;
     return ;
@@ -8,6 +8,7 @@ Dog::Dog(): Animal("Dog")
 
 Dog::~Dog()
 {
+    delete _brain;
     std::cout << "Destructor of Dog called" << std::endl;
     return ;
 }
