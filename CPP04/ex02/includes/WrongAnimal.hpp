@@ -1,5 +1,5 @@
-#ifndef WRONG_ANIMAL_HPP
-# define WRONG_ANIMAL_HPP
+#ifndef WRONG_Animal_HPP
+# define WRONG_Animal_HPP
 #include <iostream>
 #include <cmath>
 #include <string>

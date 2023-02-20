@@ -1,25 +1,25 @@
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AAnimal_HPP
+# define AAnimal_HPP
 #include <iostream>
 #include <cmath>
 #include <string>
 
-class Animal
+class AAnimal
 {
 
     protected:
         std::string _type;
     public:
         //constructors and destructors
-        Animal();
-        Animal(std::string type);
+        AAnimal();
+        AAnimal(std::string type);
         std::string getType() const;
         virtual void makeSound() const;
-        Animal(const Animal& other);
-        virtual ~Animal();
+        AAnimal(const AAnimal& other);
+        virtual ~AAnimal();
         //overloads
-        Animal& operator=(const Animal& rhs);
+        AAnimal& operator=(const AAnimal& rhs);
 };
-std::ostream &operator<<(std::ostream &out, Animal const &elem);
+std::ostream &operator<<(std::ostream &out, AAnimal const &elem);
 
 #endif

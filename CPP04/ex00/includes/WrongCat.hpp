@@ -1,11 +1,11 @@
 #ifndef WRONG_CAT_HPP
 # define WRONG_CAT_HPP
-#include "WrongAnimal.hpp"
+#include "WrongAAnimal.hpp"
 #include <iostream>
 #include <cmath>
 #include <string>
 
-class WrongCat : public WrongAnimal
+class WrongCat : public WrongAAnimal
 {
     public:
         //constructors and destructors

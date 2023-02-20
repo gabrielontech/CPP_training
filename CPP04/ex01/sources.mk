@@ -6,8 +6,8 @@ SOURCES		+=                		\
 		src/WrongCat.cpp         	\
 		src/Cat.cpp              	\
 		src/main.cpp             	\
-		src/WrongAnimal.cpp      	\
-		src/Animal.cpp           	\
+		src/WrongAAnimal.cpp      	\
+		src/AAnimal.cpp           	\
 		src/Brain.cpp            	\
 		src/Dog.cpp              	\
 

@@ -1,5 +1,5 @@
-#include "../includes/Animal.hpp"
-#include "../includes/WrongAnimal.hpp"
+#include "../includes/AAnimal.hpp"
+#include "../includes/WrongAAnimal.hpp"
 #include "../includes/Dog.hpp"
 #include "../includes/Cat.hpp"
 #include "../includes/WrongCat.hpp"
@@ -10,9 +10,9 @@
 
 // int main()
 // {
-//     const Animal* meta = new Animal(); 
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
+//     const AAnimal* meta = new AAnimal(); 
+//     const AAnimal* j = new Dog();
+//     const AAnimal* i = new Cat();
 //     std::cout << j->getType() << " " << std::endl; 
 //     std::cout << i->getType() << " " << std::endl; 
 //     i->makeSound(); //will output the cat sound! 
@@ -23,43 +23,43 @@
 
 int main()
 {
-    //-------- Tests with Animal ---------------
-    std::cout <<  "-------- ANIMAL OBJECT TESTS -----------"  << std::endl;
+    //-------- Tests with AAnimal ---------------
+    std::cout <<  "-------- AAnimal OBJECT TESTS -----------"  << std::endl;
     std::cout <<  "        Objects creation              "  << std::endl;
-    const Animal* animal = new Animal();
-    const Animal* koala = new Animal("Koala"); 
-    const Animal* dog = new Dog();
-    const Animal* cat = new Cat();
+    const AAnimal* AAnimal = new AAnimal();
+    const AAnimal* koala = new AAnimal("Koala"); 
+    const AAnimal* dog = new Dog();
+    const AAnimal* cat = new Cat();
 
     std::cout <<  "----------- types  --------------"  << std::endl;
-    std::cout << "Constructor Animal by default: " << animal->getType() << " " << std::endl;
-    std::cout << "Constructor Animal + string: " << koala->getType() << " " << std::endl;
+    std::cout << "Constructor AAnimal by default: " << AAnimal->getType() << " " << std::endl;
+    std::cout << "Constructor AAnimal + string: " << koala->getType() << " " << std::endl;
     std::cout << "Constructor Dog: "  << dog->getType() << " " << std::endl; 
     std::cout << "Constructor Cat: " << cat->getType() << " " << std::endl; 
 
     std::cout <<  "----------- Sounds --------------"  << std::endl;
     std::cout << "Cat sound : " ; cat->makeSound(); // should  output the cat sound! 
     std::cout << "Dog sound : " ; dog->makeSound(); // should  output the dog sound! 
-    std::cout << "Animal default sound : " ; animal->makeSound(); // should output no sound! 
+    std::cout << "AAnimal default sound : " ; AAnimal->makeSound(); // should output no sound! 
 
     std::cout <<  "-----------------------------------------"  << std::endl;
-    delete animal;
+    delete AAnimal;
     delete koala;
     delete cat;
     delete dog;
 
-    //-------- Tests with Wrong Animal --------------
-    std::cout <<  "------- WRONG_ANIMAL OBJECT TESTS ----------"  << std::endl;
-    const WrongAnimal* wronganimal = new WrongAnimal(); 
-    const WrongAnimal* wrongcat = new WrongCat();
+    //-------- Tests with Wrong AAnimal --------------
+    std::cout <<  "------- WRONG_AAnimal OBJECT TESTS ----------"  << std::endl;
+    const WrongAAnimal* wrongAAnimal = new WrongAAnimal(); 
+    const WrongAAnimal* wrongcat = new WrongCat();
     const WrongCat* realCat = new WrongCat();
 
     realCat->makeSound(); //should output Cat sound! 
-    wronganimal->makeSound(); //should output no sound! 
+    wrongAAnimal->makeSound(); //should output no sound! 
     wrongcat->makeSound(); // should output no sound! 
     std::cout <<  "-----------------------------------------"  << std::endl;
 
-    delete wronganimal;
+    delete wrongAAnimal;
     delete realCat;
     delete wrongcat;
 

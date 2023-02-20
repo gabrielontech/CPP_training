@@ -1,11 +1,13 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
 
 int	main(){
 
-	const Animal	*CatsAndDogs[100];
+	const AAnimal	*CatsAndDogs[100];
+	// AAnimal *animal = new AAnimal();
+
 
 	for(int i = 0; i < 100; i++){
 
@@ -26,7 +28,11 @@ int	main(){
 	for (int k = 0; k < 100; k++){
 
 		delete CatsAndDogs[k];
-	}	
+	}
+
+	// const AAnimal	*Aanimal;
+
+	// Aanimal = new AAnimal();
 	
 	return (0);
 }

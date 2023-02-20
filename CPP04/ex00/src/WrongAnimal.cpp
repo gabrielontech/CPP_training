@@ -1,50 +1,50 @@
-#include "../includes/WrongAnimal.hpp"
+#include "../includes/WrongAAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAAnimal::WrongAAnimal()
 {
-    std::cout << "Default constructor of WrongAnimal called" << std::endl;
+    std::cout << "Default constructor of WrongAAnimal called" << std::endl;
     return ;
 }
 
-WrongAnimal::WrongAnimal(std::string type)
+WrongAAnimal::WrongAAnimal(std::string type)
 {
     _type = type;
-    std::cout << "Default constructor of WrongAnimal called" << std::endl;
+    std::cout << "Default constructor of WrongAAnimal called" << std::endl;
     return ;
 }
 
 
-WrongAnimal::~WrongAnimal()
+WrongAAnimal::~WrongAAnimal()
 {
-    std::cout << "Destructor of WrongAnimal called" << std::endl;
+    std::cout << "Destructor of WrongAAnimal called" << std::endl;
     return ;
 }
 
-WrongAnimal:: WrongAnimal( const WrongAnimal &copy )
+WrongAAnimal:: WrongAAnimal( const WrongAAnimal &copy )
 {
     std::cout << "Constructor by copy called" << std::endl;
     *this = copy;
 }
 
-std::string WrongAnimal::getType() const
+std::string WrongAAnimal::getType() const
 {
     return (_type);
 }
 
-WrongAnimal & WrongAnimal::operator=( WrongAnimal const & src )
+WrongAAnimal & WrongAAnimal::operator=( WrongAAnimal const & src )
 {
    std::cout << "Copy assignment operator called" << std::endl;
    _type = src._type + "_copy";;
    return *this;
 }
 
-void    WrongAnimal::makeSound( void )const
+void    WrongAAnimal::makeSound( void )const
 {
-    std::cout << "Wrong Animal" << std::endl;
+    std::cout << "Wrong AAnimal" << std::endl;
 }
 
 
-std::ostream &operator<<(std::ostream &out, WrongAnimal const &elem)
+std::ostream &operator<<(std::ostream &out, WrongAAnimal const &elem)
 {
     out << " Type : " << elem.getType() << std::endl;
     return (out);

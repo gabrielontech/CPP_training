@@ -1,4 +1,4 @@
-#ifndef AAnimal_HPP
+#ifndef  AAnimal_HPP
 # define AAnimal_HPP
 #include <iostream>
 #include <cmath>
@@ -14,7 +14,7 @@ class AAnimal
         AAnimal();
         AAnimal(std::string type);
         std::string getType() const;
-        virtual void makeSound() const;
+        virtual void makeSound()const = 0;
         AAnimal(const AAnimal& other);
         virtual ~AAnimal();
         //overloads
