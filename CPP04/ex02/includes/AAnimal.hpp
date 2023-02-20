@@ -6,7 +6,6 @@
 
 class AAnimal
 {
-
     protected:
         std::string _type;
     public:
@@ -20,6 +19,7 @@ class AAnimal
         //overloads
         AAnimal& operator=(const AAnimal& rhs);
 };
+
 std::ostream &operator<<(std::ostream &out, AAnimal const &elem);
 
 #endif

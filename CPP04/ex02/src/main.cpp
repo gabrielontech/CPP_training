@@ -7,8 +7,6 @@ int	main(){
 
 	const AAnimal	*CatsAndDogs[100];
 	// AAnimal *animal = new AAnimal();
-
-
 	for(int i = 0; i < 100; i++){
 
 		if (i % 2){
