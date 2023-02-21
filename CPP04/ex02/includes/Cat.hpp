@@ -1,6 +1,6 @@
 #ifndef CAT_HPP
 # define CAT_HPP
-#include "AAnimal.hpp"
+#include "Aanimal.hpp"
 #include "Brain.hpp"
 #include <iostream>
 #include <cmath>

@@ -1,6 +1,6 @@
 #ifndef DOG_HPP
 # define DOG_HPP
-#include "AAnimal.hpp"
+#include "Aanimal.hpp"
 #include "Brain.hpp"
 #include <iostream>
 #include <cmath>

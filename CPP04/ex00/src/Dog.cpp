@@ -1,6 +1,6 @@
 #include "../includes/Dog.hpp"
 
-Dog::Dog(): AAnimal("Dog")
+Dog::Dog(): Animal("Dog")
 {
     std::cout << "Default constructor of Dog called" << std::endl;
     return ;
@@ -12,7 +12,7 @@ Dog::~Dog()
     return ;
 }
 
-Dog:: Dog( const Dog &copy ): AAnimal(copy._type)
+Dog:: Dog( const Dog &copy ): Animal(copy._type)
 {
     std::cout << "Constructor of Dog by copy called" << std::endl;
 }

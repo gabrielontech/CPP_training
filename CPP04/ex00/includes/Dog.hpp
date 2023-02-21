@@ -1,12 +1,12 @@
 #ifndef DOG_HPP
 # define DOG_HPP
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 #include <iostream>
 #include <cmath>
 #include <string>
 
 
-class Dog : public AAnimal
+class Dog : public Animal
 {
     public:
         //constructors and destructors

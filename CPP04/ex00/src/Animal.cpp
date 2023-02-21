@@ -1,48 +1,48 @@
-#include "../includes/AAnimal.hpp"
+#include "../includes/Animal.hpp"
 
-AAnimal::AAnimal()
+Animal::Animal()
 {
-    std::cout << "Default constructor of AAnimal called" << std::endl;
+    std::cout << "Default constructor of Animal called" << std::endl;
     return ;
 }
 
-AAnimal::AAnimal(std::string type)
+Animal::Animal(std::string type)
 {
     _type = type;
-    std::cout << "Default constructor of AAnimal called" << std::endl;
+    std::cout << "Default constructor of Animal called" << std::endl;
     return ;
 }
 
-AAnimal::~AAnimal()
+Animal::~Animal()
 {
-    std::cout << "Destructor of AAnimal called" << std::endl;
+    std::cout << "Destructor of Animal called" << std::endl;
     return ;
 }
 
-AAnimal:: AAnimal( const AAnimal &copy )
+Animal::Animal( const Animal &copy )
 {
     std::cout << "Constructor by copy called" << std::endl;
     *this = copy;
 }
 
-std::string AAnimal::getType() const
+std::string Animal::getType() const
 {
     return (_type);
 }
 
-void    AAnimal::makeSound( void )const
+void    Animal::makeSound( void )const
 {
     std::cout << "**Silence**" << std::endl;
 }
 
-AAnimal & AAnimal::operator=( AAnimal const & src )
+Animal & Animal::operator=( Animal const & src )
 {
    std::cout << "Copy assignment operator called" << std::endl;
    _type = src._type + "_copy";;
    return *this;
 }
 
-std::ostream &operator<<(std::ostream &out, AAnimal const &elem)
+std::ostream &operator<<(std::ostream &out, Animal const &elem)
 {
     out << " Type : " << elem.getType() << std::endl;
     return (out);
