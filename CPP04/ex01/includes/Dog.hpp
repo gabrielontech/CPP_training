@@ -1,13 +1,12 @@
 #ifndef DOG_HPP
 # define DOG_HPP
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 #include "Brain.hpp"
 #include <iostream>
 #include <cmath>
 #include <string>
 
-
-class Dog : public AAnimal
+class Dog : public Animal
 {
     private:
         Brain *_brain;
@@ -16,6 +15,7 @@ class Dog : public AAnimal
         Dog();
         Dog(const Dog& other);
         ~Dog();
+        Brain *getbrain() const;
         void makeSound() const;
         //overloads
         Dog& operator=(const Dog& rhs);

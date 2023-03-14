@@ -1,26 +1,26 @@
-#ifndef WRONG_AAnimal_HPP
-# define WRONG_AAnimal_HPP
+#ifndef WRONG_Animal_HPP
+# define WRONG_Animal_HPP
 #include <iostream>
 #include <cmath>
 #include <string>
 
-class WrongAAnimal
+class WrongAnimal
 {
 
     protected:
         std::string _type;
-        WrongAAnimal(std::string type);
+        WrongAnimal(std::string type);
     public:
         //constructors and destructors
-        WrongAAnimal();
+        WrongAnimal();
         std::string getType() const;
-        WrongAAnimal(const WrongAAnimal& other);
+        WrongAnimal(const WrongAnimal& other);
         void makeSound() const;
-        ~WrongAAnimal();
+        ~WrongAnimal();
         //overloads
-        WrongAAnimal& operator=(const WrongAAnimal& rhs);
+        WrongAnimal& operator=(const WrongAnimal& rhs);
 };
 
-std::ostream &operator<<(std::ostream &out, WrongAAnimal const &elem);
+std::ostream &operator<<(std::ostream &out, WrongAnimal const &elem);
 
 #endif

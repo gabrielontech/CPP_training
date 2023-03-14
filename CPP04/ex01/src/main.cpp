@@ -1,11 +1,11 @@
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
 
 int	main(){
 
-	const AAnimal	*CatsAndDogs[100];
+	const Animal	*CatsAndDogs[100];
 
 	for(int i = 0; i < 100; i++){
 
