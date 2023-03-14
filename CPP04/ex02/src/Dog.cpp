@@ -26,8 +26,9 @@ void    Dog::makeSound( void )const
 Dog & Dog::operator=( Dog const & src )
 {
    std::cout << "Copy assignment operator called" << std::endl;
-   _type = src._type + "_copy";;
-   return *this;
+    this->_type = src._type;
+	this->_brain = new Brain(*src._brain);
+	return (*this);
 }
 
 std::ostream &operator<<(std::ostream &out, Dog const &elem)

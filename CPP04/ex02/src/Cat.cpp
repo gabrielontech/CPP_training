@@ -22,8 +22,9 @@ Cat:: Cat( const Cat &copy ) : AAnimal(copy._type)
 Cat & Cat::operator=( Cat const & src )
 {
    std::cout << "Copy assignment operator called" << std::endl;
-   _type = src._type + "_copy";;
-   return *this;
+    this->_type = src._type;
+	this->_brain = new Brain(*src._brain);
+	return (*this);
 }
 
 void    Cat::makeSound( void )const
